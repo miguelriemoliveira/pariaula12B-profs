@@ -5,18 +5,22 @@ Steps for the class
 
  - Explain how to install git and create a github account and how to access it.
  - Brief introduction to github
- - Some examples of larger projects: , , [rustbot](https://github.com/miguelriemoliveira/RustBot), [smobex](https://github.com/lardemua/SmObEx), [atlascar2_calibration](https://github.com/lardemua/AtlasCarCalibration) [v3v](https://github.com/miguelriemoliveira/v3v) and [vintra](https://github.com/miguelriemoliveira/vintra-miguel)
- - Improve the README.md
+ - Some examples of our projects: [rustbot](https://github.com/miguelriemoliveira/RustBot), [smobex](https://github.com/lardemua/SmObEx), [atlascar2_calibration](https://github.com/lardemua/AtlasCarCalibration) [v3v](https://github.com/miguelriemoliveira/v3v) and [vintra](https://github.com/miguelriemoliveira/vintra-miguel)
+ - Some examples of other projects: [octomap](https://github.com/OctoMap/octomap)
+ 
+  - How to create a fork of this repository or otherwise create a copy to start new developments.
+ - **The README.md is everything**!
  - Create a gitignore file
  - Explain common procedures during development: status, commits and pushes.
- - How to create a fork of this repository or otherwise create a copy to start new developments.
+
  - Procedures to carry out during the class:
    - Create teams of 4 students.
    - Nominate a project coordinator (PC).
    - PC creates the fork of repository for his team.
    - PC invites collaborators for the project (as well as the professors to follow their work)
    - All members of teams compile existing application locally in their computers and try the execution and documentation generation.
-   - PC sends issues for each collaborator and distributes tasks: one function for each to start!
+   - Create a project to manage the issues (Kanban)
+   - (PC) creates issues for each collaborator and distributes tasks: one function for each to start!
    - Possible further developments upon function completion:
      - improve user interface (glade) to add more options (widgets)
      - improve documentation (instructions, images, examples, etc.)
