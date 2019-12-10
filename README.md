@@ -5,7 +5,7 @@ Steps for the class
 
  - Explain how to install git and create a github account and how to access it.
  - Brief introduction to github
- - Some examples of larger projects: **vintra**, **v3v**, **rustbot**, **atlascar2_calibration**
+ - Some examples of larger projects: , , [rustbot](https://github.com/miguelriemoliveira/RustBot), [smobex](https://github.com/lardemua/SmObEx), [atlascar2_calibration](https://github.com/lardemua/AtlasCarCalibration) [v3v](https://github.com/miguelriemoliveira/v3v) and [vintra](https://github.com/miguelriemoliveira/vintra-miguel)
  - Improve the README.md
  - Create a gitignore file
  - Explain common procedures during development: status, commits and pushes.
