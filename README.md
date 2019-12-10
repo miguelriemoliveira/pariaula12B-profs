@@ -12,6 +12,7 @@ Steps for the class
  - **The README.md is everything**!
  - Create a gitignore file
  - Explain common procedures during development: status, commits and pushes.
+ - github and IDEs
 
  - Procedures to carry out during the class:
    - Create teams of 4 students.
