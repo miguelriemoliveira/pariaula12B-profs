@@ -1,11 +1,26 @@
-First steps
------------
-
-Generate the documentation: make doc
-
-Build the application and test.
-
 V. Santos, 07-dez-2019,13:27
+
+Steps
+--------------------
+
+ - Create sections Execution and Instalation in README.md
+ - Create a gitignore file
+ - Explain how to install git and create a github account and how to access it.
+ - Explain common procedures during development: status, commits and pushes.
+ - How to create a fork of this repository or otherwise create a copy to start new developments.
+ - Procedures to carry out during the class:
+ - Create teams of 4 students.
+ - Nominate a project coordinator (PC).
+ - PC creates the fork of repository for his team.
+ - PC invites collaborators for the project (as well as the professors to follow their work)
+ - All members of teams compile existing application locally in their computers and try the execution and documentation generation.
+ - PC sends issues for each collaborator and distributes tasks: one function for each to start!
+ - Possible further developments upon function completion:
+--- improve user interface (glade) to add more options (widgets)
+--- improve documentation (instructions, images, examples, etc.)
+--- other improvements that the PC and his team decide to propose.
+In the end of the class, the professors will test the several projects and nominate the most successful development :-)
+ 
 
 Instructions and main packages
 ------------------------------
