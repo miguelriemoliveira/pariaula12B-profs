@@ -1,0 +1,93 @@
+/** @mainpage MAD - Mini App Drawing
+
+@author  V. Santos, 2019
+
+@section intro_sec Objetivo principal
+
+Desenvolver uma aplicação para desenhar objectos gráficos simples numa ação colaborativa usando o GitHub
+
+@section desc_sec Descrição Geral
+
+A aplicação a desenvolver é um programa em GTK que permite fazer
+grafismos (figuras geométricas distintas, textos, etc.) com o rato numa janela dedicada.
+
+Existe um programa base que já funciona e tem muitas funcionalidades principais e auxiliares,
+mas é preciso completar/desenvolver as restantes funcionalidades.
+
+Serão criadas equipas de até 4 pessoas que trabalham em colaboração através do GitHub.
+
+Todas as pessoas devem criar uma conta individual no github e instalar as ferramentas adequadas
+no seu computador para usar o GitHub.
+
+Cada pessoa da equipa terá de implementar uma funcionalidade com base nos exemplos já presentes na versão fornecida.
+
+    0-Polígonos regulares  (Já está implementado)
+    1-Polígonos em forma de estrela
+    2-Polígonos à mão livre
+    3-Coroas circulares
+    4-Textos (strings)
+
+\image html "myf01.png" "Exemplo com alguns polígonos regulares e coroas circulares."
+
+@section metod_sec Metodologia
+
+Definir um coordenador de equipa que:
+
+	Cria um GitHub para a equipa com o projeto na sua fase atual.
+	Junta os colaboradores na equipa.
+	Distribui trabalho por issues
+
+Recomenda-se a todos os membros que:
+
+	Façam o pull do github
+	Criem a documentação (make doc) para melhor compreender o pedido.
+	Façam o build da aplicação na sua fase atual e experimentem.
+
+Na fase de desenvolvimento cada membro deve procurar ir fazendo as alterações
+e testanto as suas contribuições. Quando tiver uma versão operacional (sem erros de compilação)
+deve fazer o commit e até o push.
+
+Se os colaboradores se restringirem às suas funções, é fácil grir todas as contribuições
+sem contradições. Se alguém quiser editar em áreas comuns em simultâneo terá de lidar
+com o risco de conflitos que terá de resolver.
+
+@section desc_detal_sec Descrição mais detalhada
+
+Os grafismos a desenvolver têm parâmetros como o número de vértices ou a cor do enchimento.
+
+Filosofia da implementação
+
+	Há estruturas para cada tipo de grafismos
+		-Polígonos
+		-Coroas circulares
+		-Strings de texto
+
+	Há uma estrutura global com todos os grafismos criados com o rato numa área de desenho
+		-À medida que se criam os grafismos anteriores vão-se acumulando nesta estrutura global.
+
+As funções a desenvolver/completar são:
+
+void pari_draw_regularpolygon(GdkEvent *event); [Já está completa como exemplo]
+
+void pari_draw_starpolygon(GdkEvent *event);
+
+void pari_draw_freehandpolygon(GdkEvent *event);
+
+void pari_draw_circularcrown(GdkEvent *event);
+
+void pari_draw_text(GdkEvent *event);
+
+Estas funções devem lidar com as ações do rato e em especial esperam-se ações para lidar com os eventos:
+
+	GDK_BUTTON_PRESS
+	GDK_MOTION_NOTIFY
+
+Eventualmente podem alterar-se outras funções para aumentar funcionalidades, como
+por exemplo as seguintes:
+
+	void on_starpolygon_rb_clicked(GtkWidget *widget, gpointer user_data);
+	void on_regularpolygon_rb_clicked(GtkWidget *widget, gpointer user_data);
+	void on_freehandpolygon_rb_clicked(GtkWidget *widget, gpointer user_data);
+	void on_circularcrown_rb_clicked(GtkWidget *widget, gpointer user_data);
+	void on_text_rb_clicked(GtkWidget *widget, gpointer user_data);
+*/
