@@ -107,11 +107,11 @@ void pari_draw_starpolygon(GdkEvent *event)
                 double x=geb->x;
                 double y=geb->y;
                 p_polygon *npoly=(p_polygon *)malloc(sizeof(p_polygon));
-                npoly->x=(double*)malloc((statusG.starpolygon_vertices)*sizeof(double));
-                npoly->y=(double*)malloc((statusG.starpolygon_vertices)*sizeof(double));
+                npoly->x=(double*)malloc((2*statusG.starpolygon_vertices)*sizeof(double));
+                npoly->y=(double*)malloc((2*statusG.starpolygon_vertices)*sizeof(double));
                 double ang=2*M_PI/statusG.starpolygon_vertices;
                 double radius=20;
-                for(int n=0; n< statusG.starpolygon_vertices;n++) {
+                for(int n=0; n< 2*statusG.starpolygon_vertices;n++) {
 
                     double x1, y1;
                     if (n % 2 == 0) // number is even
@@ -127,7 +127,7 @@ void pari_draw_starpolygon(GdkEvent *event)
                     npoly->y[n]=y1;
                     printf("my pt is x=%f and y=%f\n", x1, y1);
                 }
-                npoly->num_points=statusG.starpolygon_vertices;  //to close the polygon
+                npoly->num_points=2*statusG.starpolygon_vertices;  //to close the polygon
                 npoly->x0=x;
                 npoly->y0=y;
                 npoly->line_color=0;
@@ -149,7 +149,7 @@ void pari_draw_starpolygon(GdkEvent *event)
                 double ang=2*M_PI/statusG.starpolygon_vertices;
                 double radius=sqrt((x-x0)*(x-x0)+(y-y0)*(y-y0));
                 double angoff=atan2( y-y0, x-x0);
-                for(int n=0; n < statusG.starpolygon_vertices;n++)
+                for(int n=0; n < 2*statusG.starpolygon_vertices;n++)
                 {
                     double x1=x0+radius*cos( n*ang+angoff );
                     double y1=y0+radius*sin( n*ang+angoff );
