@@ -1,6 +1,14 @@
 V. Santos, 11-dez-2019 ( I was here :-) -- Cá estou eu a mudar outra vez!
 V. Santos, 11-Dez-2019,15:18
 
+# How to send files to online repo
+
+```bash
+git add .
+git commit -m "mensagem de commit"
+git push
+```
+
 Steps for the class
 --------------------
 
