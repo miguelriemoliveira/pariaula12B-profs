@@ -130,5 +130,9 @@ version 2.4.X:
   https://docs.opencv.org/2.4/
 
 
+Execution instructions
+----------------------
+
+ To execute just run the program "myf" in the build directory.
 
 
