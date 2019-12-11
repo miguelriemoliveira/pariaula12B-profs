@@ -171,7 +171,56 @@ void pari_draw_freehandpolygon(GdkEvent *event)
  */
 void pari_draw_circularcrown(GdkEvent *event)
 {
-	//...
+	static int last_button=0;
+	GdkEventButton *geb=(GdkEventButton *)event; //aux variable
+	switch( event->type)
+	{
+		case GDK_BUTTON_PRESS: //it's a new one
+			last_button=geb->button;
+			if( geb->button == 1 )  //left button
+			{
+				double x=geb->x;
+				double y=geb->y;
+				p_crown *crw=(p_crown *)malloc(sizeof(p_crown));
+				double radius=20;
+				crw->thickness=statusG.circularcrown_thickness;
+				crw->x0=x;
+				crw->y0=y;
+				crw->radius=radius;
+				crw->line_color=0;
+				crw->fill_color=statusG.circularcrown_rgbcolor;
+
+				pari_add_crown_to_main_drawing(crw, pdG);
+			}
+
+			break;
+
+		case GDK_MOTION_NOTIFY:  //mouse motion means modifying one just drawn
+			if( last_button == 1 )  //if last pressed button was the right one (avoid motion from other buttons)
+			{
+				double x=geb->x;
+				double y=geb->y;
+				double x0=pdG->crowns[pdG->num_crowns-1]->x0;
+				double y0=pdG->crowns[pdG->num_crowns-1]->y0;
+				p_crown *crw=pdG->crowns[pdG->num_crowns-1];
+				double radius=sqrt((x-x0)*(x-x0)+(y-y0)*(y-y0));
+				crw->radius=radius;
+			}
+
+			break;
+
+		default:
+			//not yet managed
+			break;
+	}	
+
+
+
+
+
+
+
+
 }
 
 /**
