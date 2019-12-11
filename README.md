@@ -9,6 +9,15 @@ git commit -m "mensagem de commit"
 git push
 ```
 
+# Compilation
+
+```bash
+mkdir build
+cd build
+cmake ..
+make
+```
+
 Steps for the class
 --------------------
 
